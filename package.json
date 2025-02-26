@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "wepack-cli": "^0.0.1-security"
+  }
+}
