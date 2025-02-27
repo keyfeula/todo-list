@@ -1,7 +1,7 @@
 import { TodoItem } from "./todo-item";
 
 export class TodoProject {
-    constructor (projectName) {
+    constructor (projectName = "untitled") {
         this.todoList = [];
         this.projectName = projectName;
     }
