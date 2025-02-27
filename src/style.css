@@ -6,14 +6,22 @@
 }
 
 :root {
-    --main-bg-color: #dadada;
+    --main-bg-color: #f0f0f0;
     --header-color: #2361e6;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+button.active:hover {
+    filter: none;
 }
 
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 8rem 1fr;
 }
 
 header {
@@ -57,13 +65,14 @@ nav button.active {
 main {
     background: var(--main-bg-color);
     display: grid;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 6rem 1fr;
+    padding-bottom: 2rem;
 }
 
-main .btn-container {
+.btn-container {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .btn-container button {
@@ -72,4 +81,35 @@ main .btn-container {
     background: var(--header-color);
     color: var(--main-bg-color);
     border: none;
+}
+
+.items-container {
+    display: grid;
+    grid-template-rows: 4rem;
+    grid-auto-rows: 4rem;
+    padding: 0 15rem;
+    gap: 1rem;
+}
+
+.todo-item {
+    border: 1px solid var(--header-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    background: var(--header-color);
+    border-radius: 5px;
+}
+
+.todo-item p {
+    color: var(--main-bg-color);
+}
+
+.todo-item button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 5rem;
+    background: var(--main-bg-color);
 }
